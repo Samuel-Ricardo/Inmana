@@ -4,6 +4,8 @@ defmodule InmanaWeb.RestaurantsController  do
   alias Inmana.Restaurant
   alias Inmana.Restaurants.Create
 
+  action_fallback :FallbackController
+
   def create(conn, params) do
     with {:ok, %Restaurant{} = restaurant} <- Create.call(params) do
      conn
