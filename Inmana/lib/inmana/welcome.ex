@@ -9,7 +9,7 @@ defmodule Inmana.Welcomer do
       |> evaluate(age)
   end
 
-  defp evaluate("pedro >:()", 18) do
+  defp evaluate("pedro >()", 18) do
     {:ok, "You are a very Special Pedro :()"}
   end
 
@@ -19,7 +19,7 @@ defmodule Inmana.Welcomer do
   end
 
   defp evaluate(name, _age) do
-    {:erorr, "Welcome #{name} danese you aren't the right pedro >:-()"}
+    {:error, "Welcome #{name} danese you aren't the right pedro >:-()"}
   end
 
 end
