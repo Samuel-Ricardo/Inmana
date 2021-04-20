@@ -1,7 +1,7 @@
-defmodule Inmana.Welcome do
+defmodule Inmana.Welcomer do
 
-  def welcome (params) do
-    age = params["age"]
+  def welcome (%{"name" => name, "age" => age}) do
+    age = params["age"] |> String.to_integer()
 
     params["name"]
       |> String.trim()
@@ -9,12 +9,17 @@ defmodule Inmana.Welcome do
       |> evaluate(age)
   end
 
-  defp evaluate("Pedro >:()", "18") do
-    "You are a very Special Pedro >()"
+  defp evaluate("pedro >:()", 18) do
+    {:ok, "You are a very Special Pedro :()"}
+  end
+
+  defp evaluate(_name, age) when age > 18 do
+
+    {:ok, "PEDRO ADULTO <:()"}
   end
 
   defp evaluate(name, _age) do
-    "Welcome #{name} danese you aren't pedro >:-()"
+    {:erorr, "Welcome #{name} danese you aren't the right pedro >:-()"}
   end
 
 end
