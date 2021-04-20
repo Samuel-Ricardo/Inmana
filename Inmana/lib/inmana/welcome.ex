@@ -1,9 +1,9 @@
 defmodule Inmana.Welcomer do
 
   def welcome (%{"name" => name, "age" => age}) do
-    age = params["age"] |> String.to_integer()
+    age = String.to_integer(age)
 
-    params["name"]
+    name
       |> String.trim()
       |> String.downcase()
       |> evaluate(age)
