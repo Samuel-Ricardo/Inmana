@@ -17,8 +17,15 @@ defmodule InmanaWeb.ErrorView do
   end
 
   def render("error.json", %{result: %Changeset{} = changeset}) do
+    %{
+      message: translate_erros(changeset)
+    }
+  end
 
-    %{message: translate_erros(changeset)}
+  def render("error.json", %{result: result}) do
+    %{
+      message: result
+    }
   end
 
   defp translate_erros(changeset) do
