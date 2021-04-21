@@ -5,6 +5,7 @@ defmodule Inmana.Restaurant do
   alias Inmana.Supply
 
   @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
 
   @required_params [:email, :name]
 
