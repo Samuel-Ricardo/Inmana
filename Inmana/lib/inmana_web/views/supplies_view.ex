@@ -7,4 +7,6 @@ defmodule InmanaWeb.SuppliesView do
       supplay: supply
     }
   end
+
+  def render("show.json", %{supply: supply}), do: %{supply: supply}
 end
