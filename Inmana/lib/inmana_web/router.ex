@@ -12,7 +12,7 @@ defmodule InmanaWeb.Router do
 
     post "/restaurants", RestaurantsController, :create
 
-    post "/supplies", SuppliesController, :create
+    resources "/supplies", SuppliesController, only: [:create, :show]
 
   end
 
