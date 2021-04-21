@@ -2,7 +2,7 @@ defmodule InmanaWeb.SuppliesController do
   use InmanaWeb, :controller
 
   alias Inmana.Supply
-
+  alias InmanaWeb.FallbackController
 
   action_fallback FallbackController
 
