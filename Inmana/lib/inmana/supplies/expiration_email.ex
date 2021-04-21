@@ -13,5 +13,8 @@ defmodule Inamana.Supplies.ExpirationEmail do
 
   def render_email_text(supplies) do
 
+    initial_text = "--------------------Supplies that are about to expires-------------------- \n"
+
+    Enum.reduce(supplies, initial_text, fn supply, text -> text <> supply_string(supply) end)
   end
 end
