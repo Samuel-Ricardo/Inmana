@@ -1,7 +1,7 @@
 defmodule InmanaWeb.SuppliesView do
   use InmanaWeb, :view
 
-  def render("create.json", %{Supply: supply}) do
+  def render("create.json", %{supply: supply}) do
     %{
       message: "Supplay created :)",
       supplay: supply
