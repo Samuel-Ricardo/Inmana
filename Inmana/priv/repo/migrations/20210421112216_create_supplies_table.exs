@@ -7,7 +7,7 @@ defmodule Inmana.Repo.Migrations.CreateSuppliesTable do
       add :description, :string
       add :expiration_date, :date
       add :responsible, :string
-      add :restaurant_id, references(:restaurant, type: :binary_id)
+      add :restaurant_id, references(:restaurants, type: :binary_id)
 
       timestamps()
     end

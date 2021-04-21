@@ -5,6 +5,7 @@ defmodule Inmana.Supply do
   alias Inmana.Restaurant
 
   @primary_key {:id, :binary_id, autogenerate: true}
+  @foreign_key_type :binary_id
 
   @required_params [:description, :expiration_date, :responsible, :restaurant_id]
 
