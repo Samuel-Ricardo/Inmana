@@ -1,7 +1,7 @@
 defmodule Inmana.Supplies.GetByExpirationDate do
   import Ecto.Query
 
-  alias Inmana.Supply
+  alias Inmana.{Repo, Restaurant, Supply}
 
   def call do
 
@@ -16,6 +16,10 @@ defmodule Inmana.Supplies.GetByExpirationDate do
         supply.expiration_date >= ^beginning_of_week and supply.expiration_date <= ^end_of_week,
         preload: [:restaurant]
 
+
+  query
+   |> Repo.all()
+   |> Enum.group_by(fn %Supply{restaurant: %Restaurant{email: email}} -> email end)
   end
 
 end
