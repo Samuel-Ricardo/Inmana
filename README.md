@@ -43,7 +43,8 @@ Main Technologies:
 - [Bcrypt](https://hex.pm/packages/bcrypt_elixir)
 - [Credo](https://hex.pm/packages/credo)
 - [ExCoveralls](https://hex.pm/packages/excoveralls)
-
+- [Dotenv](https://github.com/avdi/dotenv_elixir)
+- [Bamboo](https://github.com/thoughtbot/bamboo)
 <br>
 <br>
 
@@ -78,6 +79,17 @@ Main Technologies:
   <p> by default the Phoenix installs Credo, but if necessary, install separately by click on this image </p>
  
   > <a href="https://github.com/rrrene/credo#installation-and-usage"> <img width="60px" src="https://hexdocs.pm/credo/assets/logo.png"></img> </a>
+ 
+ <br>
+ 
+  ## <img width="150px" src="https://user-images.githubusercontent.com/22394/39895001-b13a9c9a-5476-11e8-9c58-f5fc5f09b697.png"></img> 
+ 
+  <p>Bamboo is part of the thoughtbot Elixir family of projects. Is a easy way to send emails whit elixir. designed to be simple and powerful.</p>
+  
+  <p> Install by click on this Image: </p>
+  
+  > <a href="https://github.com/thoughtbot/bamboo#installation"> <img width="80px" src="https://user-images.githubusercontent.com/22394/39895001-b13a9c9a-5476-11e8-9c58-f5fc5f09b697.png" > <img/> </a>
+ 
  
  <br>
  
