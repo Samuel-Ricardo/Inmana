@@ -4,6 +4,7 @@ defmodule Inmana.Repo.Migrations.CreateSuppliesTable do
   def change do
 
     create table(:supplies) do
+      add :name, :string
       add :description, :string
       add :expiration_date, :date
       add :responsible, :string

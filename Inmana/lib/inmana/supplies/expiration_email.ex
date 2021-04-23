@@ -21,6 +21,7 @@ defmodule Inmana.Supplies.ExpirationEmail do
   end
 
   defp supply_to_string(%Supply{
+    name: name,
     description: description,
     expiration_date: expiration_date,
     responsible: responsible
@@ -28,6 +29,7 @@ defmodule Inmana.Supplies.ExpirationEmail do
 
     "
       \n
+      - Supply: #{name} \n
       - Supply Description: #{description} \n
       - Expiration Date: #{expiration_date} \n
       - Responsible: #{responsible} \n
