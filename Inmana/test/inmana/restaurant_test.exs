@@ -25,11 +25,14 @@ defmodule Inmana.RestaurantTest do
 
     test "When params are invalid return an error " do
 
-      params = %{name: "Si", email: ""}
+      params = %{name: "S", email: ""}
 
       response = Restaurant.changeset(params)
+      expected_response = %{email: ["can't be blank"], name: ["should be at least 2 character(s)"]}
 
       assert %Changeset{ valid?: false } = response
+
+      assert errors_on(response) == expected_response
 
     end
   end

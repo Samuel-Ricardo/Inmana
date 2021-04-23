@@ -25,7 +25,7 @@ defmodule Inmana.WelcomerTest do
 
     test "When the user is under age returns a message" do
       params = %{"name" => "pedro >-( )", "age" => "16"}
-      expected_result = {:ok, "Welcome pedro >-( ) danese you aren't the right pedro >:-()"}
+      expected_result = {:error, "Welcome pedro >-( ) danese you aren't the right pedro >:-()"}
 
       result = Welcomer.welcome(params)
 
