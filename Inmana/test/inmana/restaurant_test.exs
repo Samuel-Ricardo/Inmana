@@ -1,6 +1,7 @@
 defmodule Inmana.RestaurantTest do
   use Inmana.DataCase
 
+  alias Ecto.Changeset
   alias Inmana.Restaurant
 
   describe "changeset/1" do
@@ -11,7 +12,7 @@ defmodule Inmana.RestaurantTest do
 
       response = Restaurant.changeset(params)
 
-      asset %Changeset{
+      assert %Changeset{
               changes: %{
                 email: "siri@fenda.com",
                 name: "Siri Cascudo"
@@ -21,5 +22,15 @@ defmodule Inmana.RestaurantTest do
 
     end
 
+
+    test "When params are invalid return an error " do
+
+      params = %{name: "Si", email: ""}
+
+      response = Restaurant.changeset(params)
+
+      assert %Changeset{ valid?: false } = response
+
+    end
   end
 end
