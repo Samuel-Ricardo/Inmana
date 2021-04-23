@@ -1,4 +1,4 @@
-defmodule Inamana.Supplies.ExpirationEmail do
+defmodule Inmana.Supplies.ExpirationEmail do
   import Bamboo.Email
 
   alias Inmana.Supply

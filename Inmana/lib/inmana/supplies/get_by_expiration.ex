@@ -7,7 +7,7 @@ defmodule Inmana.Supplies.GetByExpirationDate do
 
     today = Date.utc_today()
 
-    beginning_of_week = Date.beginnig_of_week(today)
+    beginning_of_week = Date.beginning_of_week(today)
   end_of_week = Date.end_of_week(today)
 
   query =

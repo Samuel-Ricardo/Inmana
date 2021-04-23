@@ -1,10 +1,11 @@
 defmodule Inmana.Supplies.ExpirationNotification do
   alias Inmana.Mailer
-  alias Inmana.Sipplies.{ExpirationEmail, GetByExpiration}
+  alias Inmana.Supplies.{ExpirationEmail, GetByExpirationDate}
+
 
   def send do
 
-    data = GetByExpiration.call()
+    data = GetByExpirationDate.call()
 
     data
      |>Task.async_stream( fn {to_email, supplies} -> send_email(to_email, supplies) end)
