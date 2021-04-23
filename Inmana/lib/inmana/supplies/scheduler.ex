@@ -6,7 +6,7 @@ defmodule Inmana.Supplies.Scheduler do
 
   #CLIENT
 
-  def statr_link(_state) do
+  def start_link(_state) do
     GenServer.start_link(__MODULE__, %{})
   end
 
@@ -14,6 +14,9 @@ defmodule Inmana.Supplies.Scheduler do
 
   @impl true
   def init(state \\ %{}) do
+
+    handle_info(:generate, self())
+
     {:ok, state}
   end
 
@@ -38,6 +41,6 @@ defmodule Inmana.Supplies.Scheduler do
   end
 
   def schedule_notification do
-    Process.send_after(self, :generate, 1000 * 10)
+    Process.send_after(self(), :generate, 1000 * 60 * 60 * 24 * 7 )
   end
 end
