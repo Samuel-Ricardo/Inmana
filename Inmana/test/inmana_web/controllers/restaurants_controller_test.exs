@@ -20,7 +20,26 @@ defmodule InmanaWeb.RestaurantsControllerTest do
           }
         } = response
     end
-    
+
+
+    test "WHen all params are invalid returns a error", %{conn: conn} do
+      params = %{name: "C", email: ">(:)"}
+
+      response =
+        conn
+         |> post(Routes.restaurants_path(conn, :create, params))
+         |> json_response(:bad_request)
+
+      expected_response = %{
+        "message" => %{
+          "email" => ["has invalid format"],
+          "name" => ["should be at least 2 character(s)"]
+        }
+      }
+
+         assert expected_response == response
+    end
+
   end
 
 end
