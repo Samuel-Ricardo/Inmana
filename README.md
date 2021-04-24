@@ -76,7 +76,7 @@ Main Technologies:
 
 - [Phoenix Framework](https://hexdocs.pm/phoenix/installation.html)
 
-  <p> by default the Phoenix installs Credo, but if necessary, install separately by click on this image </p>
+  <p> install Credo separately by click on this image </p>
  
   > <a href="https://github.com/rrrene/credo#installation-and-usage"> <img width="60px" src="https://hexdocs.pm/credo/assets/logo.png"></img> </a>
  
